@@ -1,34 +1,91 @@
 <!DOCTYPE html>
-<html lang="el">
 
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Form</title>
+    <title>Form-Lab2</title>
+    <style>
+        input{
+            border-radius: 3px;
+            border: 1px solid grey;
+            padding: 4px;
+        }
+    </style>
 </head>
 
 <body>
-    <form method="get">
+    <form>
+        <h1>Αίτηση Έκδοσης Πιστοποιητικού</h1>
         <fieldset>
-            <legend>Προσωπικά στοιχεία</legend>
+            <legend>Στοιχεία Φοιτητή</legend>
+            <label>Συμπληρώστε τα στοιχεία σας με ελληνικούς χαρακτήρες</label>
             <div>
-                <label for="name">Όνομα:</label>
-                <input type="text" id="name" name="user_name">
+                <br>
+                <label for="first_name">Ονοματεπώνυμο</label>
+                <br>
+                <input type="text" id="first_name" name="first_name" placeholder="Όνομα">
+                <input type="text" id="last_name" name="last_name" placeholder="Επώνυμο">
             </div>
+            <br>
             <div>
-                <label for="mail">E-mail:</label>
-                <input type="email" id="mail" name="user_mail">
+                <label for="odos">Στοιχεία διεύθυνσης</label>
+                <br>
+                <input type="text" id="odos" name="address_number" placeholder="Οδός και αριθμός" size="46">
+                <br>
+                <br>
+                <input type="text" id="city" name="city" placeholder="Πόλη">
+                <input type="text" id="postal_code" name="postal_code" placeholder="Ταχυδρομικός Κώδικας">
             </div>
+            <br>
             <div>
-                <label for="birthday">Ημερομηνία Γέννησης:</label>
-                <input type="date" id="birthday" name="user_birthday">
+                <label for="phone">Στοιχεία επικοινωνίας</label>
+                <br>
+                <input type="tel" id="phone" name="phone" placeholder="Τηλέφωνο">
+                <input type="email" id="email" name="email" placeholder="Διεύθυνση email">           
             </div>
+            <br>
             <div>
-                <input type="submit" value="Υποβολή">
+                <label>Έτος σπουδών</label>
+                <input type="radio" name="year" value="A"> A
+                <input type="radio" name="year" value="B"> B
+                <input type="radio" name="year" value="Γ"> Γ
+                <input type="radio" name="year" value="Δ"> Δ
+                <input type="radio" name="year" value="Ε"> Ε
+            </div>
+            <br>
+            <div>
+                <label for="AM">Αριθμός μητρώου</label>
+                <br>
+                <input type="number" id="AM" name="AM" placeholder="1050505">
             </div>
         </fieldset>
+        <fieldset>
+            <legend>Επιλέξτε πιστοποιητικό και τρόπο παραλαβής</legend>
+            <label for="eidos">Είδος πιστοποιητικού</label>
+            <br>
+            <select id="eidos" name="certification">
+                <option value="ΦΚ">Φωτοτυπία καρτέλας</option>
+                <option value="ΒΣ">Βεβαίωση σπουδών</option>
+            </select>
+        </fieldset>
+        <fieldset>
+            <legend>Παραλαβή Πιστοποιητικού</legend>
+            <div>
+                <input type="radio" name="way" value="A"> Παραλαβή από τη γραμματεία
+                <br>
+                <input type="radio" name="way" value="B"> Αποστολή στη διεύθυνση κατοικίας
+            </div>
+            <div>
+                <label for="date_paralabis">Ημερομηνία παραλαβής</label><br>
+                <input type="date" id="date_paralabis" name="date_paralabis">
+            </div>
+        </fieldset>
+        <hr>
+        <div>
+            <input type="submit" value="Υποβολή">
+        </div>
     </form>
 </body>
-
 </html>
