@@ -1,0 +1,93 @@
+html {
+  font-size: 10px;
+}
+
+body {
+  background-color: #fff;
+  color: #333;
+  margin: 0;
+  /* ορίζει font-size 1.8em και line-height 1.8 (άρα θα είναι 1.8 x {ό,τι είναι το font-size})*/
+  /* sets font-size to 1.8em and line-height to 1.8 (so it will be 1.8 x {whatever the font-size is})*/
+  font: 1.8em / 1.8 Arial, Helvetica, sans-serif;
+}
+
+.logo {
+  font-size: 200%;
+  padding: 50px 20px;
+  /* δοκιμάστε να βγάλετε το auto... το 0 είναι το margin (εξωτερικό περιθώριο πάνω και κάτω) και το auto το εξ. περιώριο δεξιά και αριστερά.
+  auto= θα έχει το ίδιο margin δεξιά αριστερά, άρα θα φαίνεται στοιχισμένο στο κέντρο */
+  /* try taking out auto... 0 is the margin (outer margin top and bottom) and auto is the outer margin left and right.
+  auto= will have the same margin right to left, so it will appear centered */
+  margin: auto;
+  max-width: 980px;
+}
+
+article {
+  margin: auto;
+  max-width: 980px;
+  padding: 20px;
+}
+
+nav {
+  position: sticky;
+  top: 0px;
+  margin: 0 auto;
+}
+
+a {
+  display: flex;
+  text-decoration: none;
+  color: white;
+  padding: 0px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+a:hover {
+  color: rgba(164, 9, 9, 0.705);
+  background-color:  #ded2d2c7;
+  cursor: pointer;
+}
+
+ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  list-style-type: none;
+  background-color: black;
+  flex-wrap: wrap;
+  margin: 0px auto;
+  padding: 0px;
+}
+
+.selected a {
+  color: red;
+  background-color: #ded2d2c7;
+  flex-grow: 1;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-gap: 10px;
+  margin-bottom: 10px;
+}
+
+.form-grid i{
+  grid-column: 1 / -1;
+}
+
+.form-flex {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.form-grid select{
+  background-color: #d4cdcd;
+}
+
+button {
+  padding: 7px;
+}
