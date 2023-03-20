@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: yellow;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            background-color: white;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .div2 {
+            display: flex;
+            gap: 2rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <p>
+            <!--μην ξεχάσω...-->
+        </p>
+        <form action="">
+            <input id="todo" type="text" placeholder="π.χ. να κάνω γυμναστική">
+            <input id="submitButton" type="submit">
+        </form>
+        <div id="list">
+
+        </div>
+    </div>
+</body>
+
+<script>
+    document.getElementById("submitButton").addEventListener("click",
+        function (event) {
+            event.preventDefault();
+            list = document.getElementById('list');
+            todo = document.getElementById('todo');
+            if (todo.value !== '') {
+                div = document.createElement('div');
+                div.className = 'div2';
+                paragraph = document.createElement('p');
+                text = document.createTextNode(`${todo.value}`);
+                paragraph.appendChild(text);
+                div.appendChild(paragraph);
+                input = document.createElement('input');
+                input.type = 'submit';
+                div.appendChild(input);
+                list.appendChild(div);
+                todo.value = "";
+            }
+        })
+</script>
+
+</html>
